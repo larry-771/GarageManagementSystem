@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Garage Management System</h1>
+            <p>Manage your vehicle inventory with ease</p>
+        </header>
+
+        <div class="content">
+            <section class="form-section">
+                <h2 class="section-title">Add New Car</h2>
+                <form id="carForm">
+                    <div class="form-group">
+                        <label for="matricule">License Plate</label>
+                        <input type="text" id="matricule" placeholder="e.g., AB-123-CD" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">Brand</label>
+                        <input type="text" id="name" placeholder="e.g., Renault" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="modele">Model</label>
+                        <input type="text" id="modele" placeholder="e.g., Clio" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" required>
+                            <option value="">Select a type</option>
+                            <option value="Berline">Berline</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Coupe">Coupe</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Convertible">Convertible</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nbchev">Horsepower</label>
+                        <input type="number" id="nbchev" min="1" max="1000" placeholder="e.g., 90" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-success">Add Car</button>
+                    <button type="button" id="resetBtn" class="btn">Reset Form</button>
+                </form>
+                
+                <div class="search-section">
+                    <h2 class="section-title">Search Car</h2>
+                    <div class="form-group">
+                        <label for="searchMatricule">Search by License Plate</label>
+                        <input type="text" id="searchMatricule" placeholder="Enter license plate">
+                    </div>
+                    <button id="searchBtn" class="btn">Search</button>
+                    <button id="showAllBtn" class="btn">Show All</button>
+                </div>
+            </section>
+            
+            <section class="list-section">
+                <h2 class="section-title">Cars in Garage</h2>
+                <div class="car-list" id="carList">
+                    
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Garage Management System &copy; 2023</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="Voiture.js"></script>
+    
+</body>
+</html>
